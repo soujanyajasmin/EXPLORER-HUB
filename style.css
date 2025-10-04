@@ -374,3 +374,149 @@ h1, h2, h3, .site-name {
   font-size: 1.3rem;
   font-weight: 500;
 }
+
+/* Travel Inspiration Section */
+.inspiration {
+  padding: 50px 10% 50px;
+  background: linear-gradient(135deg, #fddb92, #d1fdff); 
+  color: #3B2F2F;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.inspiration-subtitle {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.inspiration-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.inspiration-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Inspiration Card Overlay */
+.inspiration-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.inspiration-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay container */
+.inspiration-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* Show overlay on hover */
+.inspiration-card:hover img {
+  transform: scale(1.1);
+}
+
+.inspiration-card:hover .inspiration-hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.inspiration-hover h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inspiration-hover p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+/* Surprise Me Button */
+#resetInspiration {
+  background: linear-gradient(135deg, #FF9A8B, #FF6A88, #FF99AC);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+/* Hover effect */
+#resetInspiration:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #FF99AC, #FF6A88, #FF9A8B); /* reverse gradient */
+}
+
+/* Click/Active effect */
+#resetInspiration:active {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Floating suitcase animation */
+#resetInspiration::after {
+  content: "🧳";
+  position: absolute;
+  right: 15px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#resetInspiration:hover::after {
+  opacity: 1;
+  animation: floatSuitcase 1s ease-in-out infinite alternate;
+}
+
+/* Float animation */
+@keyframes floatSuitcase {
+  from { transform: translateY(0) translateX(0); }
+  to { transform: translateY(-5px) translateX(5px); }
+}
