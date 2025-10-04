@@ -1087,3 +1087,85 @@ h1, h2, h3, .site-name {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
 }
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(135deg, #006400, #008080);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 60%;
+    padding: 15px;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    height: 70vh; 
+    padding: 40px 20px;
+    text-align: center;
+    background-size: cover; 
+    background-position: center center;
+    background-attachment: scroll;
+  }
+
+  .hero-content h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .hero-content p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+
+  .weather-box {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .weather-box input {
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .weather-box button {
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .testimonial-card {
+    padding: 25px 15px;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .add-review h3 {
+    font-size: 1.5rem;
+  }
+
+  #travelInfo {
+    display: block;
+    font-size: 14px;
+  }
+}
