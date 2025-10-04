@@ -128,6 +128,54 @@
   </div>
 </section>
 
+<!--Testimonials Section-->
+<section class="testimonials" id="testimonials">
+  <h2>What Our Travelers Say</h2>
+
+  <!-- Carousel Container -->
+  <div class="testimonial-carousel-container">
+    <div class="testimonial-carousel">
+      <div class="testimonial-card active">
+        <p>"Explorer Hub made trip planning so easy! I found amazing places and the weather info was super helpful."</p>
+        <div class="stars">★★★★★</div>
+        <h4>- Sarah W.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The website is clean and simple. I loved browsing through destinations and planning my next trip."</p>
+        <div class="stars">★★★★☆</div>
+        <h4>- Ankit R.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Great design and smooth experience. Perfect for anyone who loves traveling!"</p>
+        <div class="stars">★★★★★</div>
+        <h4>- Emily T.</h4>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+
+  <!-- Review Submission Form -->
+  <div class="add-review">
+    <h3>Share Your Experience</h3>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+      <div class="rating-input">
+        <label><input type="radio" name="stars" value="5" required> ⭐⭐⭐⭐⭐</label><br>
+        <label><input type="radio" name="stars" value="4"> ⭐⭐⭐⭐</label><br>
+        <label><input type="radio" name="stars" value="3"> ⭐⭐⭐</label><br>
+        <label><input type="radio" name="stars" value="2"> ⭐⭐</label><br>
+        <label><input type="radio" name="stars" value="1"> ⭐</label>
+      </div>
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+</section>
+
+
     <script src="script.js"></script>
 </body>
 </html>
