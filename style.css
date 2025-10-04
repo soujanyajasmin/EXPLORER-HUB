@@ -137,3 +137,142 @@ h1, h2, h3, .site-name {
 .search-box button:hover {
   background: linear-gradient(45deg, #2E8B57, #3B2F2F);
 }
+
+/* Destinations Section */
+.destinations {
+  padding: 50px 10% 50px;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);   
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  color: #2E8B57;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 3px solid #2E8B57;
+  border-radius: 50px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Grid layout */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Destination Card */
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Info Box */
+.destination-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  cursor: pointer;
+}
+
+.destination-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.destination-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.destination-info button {
+  padding: 6px 15px;
+  background: #2E8B57;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.destination-info button:hover {
+  background: #006400;
+}
+
+.destination-card:hover img {
+  transform: scale(1.1);
+}
+
+.destination-card:hover .destination-info {
+  transform: translateY(0);
+}
+
+/* Refresh Destinations Button */
+#refreshDestinations {
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D, #6BCB77); 
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  margin-top: 50px;
+}
+
+#refreshDestinations:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #6BCB77, #FFD93D, #FF6B6B); 
+}
+
+#refreshDestinations:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+#refreshDestinations:hover::after {
+  content: "✈️";
+  display: inline-block;
+  animation: fly 1s ease-in-out infinite alternate;
+  margin-left: 5px;
+}
+
+@keyframes fly {
+  from { transform: translateY(0) translateX(0); }
+  to { transform: translateY(-5px) translateX(5px); }
+}
