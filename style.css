@@ -323,3 +323,54 @@ h1, h2, h3, .site-name {
   font-size: 0.95rem;
   color: #444;
 }
+
+/* Weather Section */
+.weather {
+  padding: 50px 10% 50px;
+  background: linear-gradient(135deg, #d8a7b1, #fbcabb);
+  color: #5a3e36;
+  text-align: center;
+  border-radius: 0px;
+  margin: auto auto;
+  margin-top: 50px;
+}
+
+.weather-box {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  max-width: 500px;
+  flex-wrap: wrap;
+}
+
+.weather-box input {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 50px 0 0 50px;
+  flex: 1;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.weather-box button {
+  background: linear-gradient(45deg, #3B2F2F, #2E8B57);
+  border: none;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 0 50px 50px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.weather-result {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
